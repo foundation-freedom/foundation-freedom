@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <h1>Our Mission</h1>
         <p>Foundation Freedom exists to build resilient, decentralized systems that keep people free to choose how they live and cooperate.</p>
+        <nav class="site-nav">
+            <a href="/foundation-freedom/index.html">Home</a>
+            <a href="/foundation-freedom/pages/mission.html">Mission</a>
+            <a href="/foundation-freedom/pages/join.html">Join</a>
+            <a href="/foundation-freedom/pages/contact.html">Contact</a>
+        </nav>
     </header>
     <main>
         <section>
@@ -32,12 +38,17 @@
             <p>We work in the open, develop accessible technology, and teach the principles of decentralization so communities can organize themselves and build trustworthy systems together.</p>
         </section>
     </main>
-    <footer>
-        <p>&copy; <span id="current-year"></span> Foundation Freedom. All rights reserved.</p>
+    <footer class="site-footer">
+        <p>
+            &copy; <span class="js-current-year"></span> Foundation Freedom
+            <span class="footer-links">
+                <a href="/foundation-freedom/index.html">Home</a>
+                <a href="/foundation-freedom/pages/mission.html">Mission</a>
+                <a href="/foundation-freedom/pages/join.html">Join</a>
+                <a href="/foundation-freedom/pages/contact.html">Contact</a>
+            </span>
+        </p>
     </footer>
     <script src="../assets/js/main.js"></script>
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>

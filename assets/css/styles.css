@@ -1,31 +1,220 @@
+:root {
+    font-size: 16px;
+    color-scheme: light;
+    --ff-font-family: 'Helvetica Neue', Arial, sans-serif;
+    --ff-text-color: #1f2933;
+    --ff-background: #f5f7fa;
+    --ff-accent: #1b65d1;
+    --ff-accent-dark: #1552ad;
+    --ff-border: rgba(15, 23, 42, 0.1);
+    --ff-radius: 0.5rem;
+    --ff-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    --ff-max-width: 60rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
-    color: #222;
+    font-family: var(--ff-font-family);
+    color: var(--ff-text-color);
+    background-color: var(--ff-background);
+    line-height: 1.6;
+}
+
+img,
+svg,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+header,
+main,
+footer {
+    max-width: var(--ff-max-width);
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+header {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
 }
 
 main {
-    max-width: 960px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
 }
 
-.button {
-    display: inline-block;
-    padding: 0.65rem 1.25rem;
-    background-color: #0d6efd;
-    color: #fff;
-    border: none;
-    border-radius: 0.375rem;
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.25;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+p,
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+}
+
+ul,
+ol {
+    padding-left: 1.5rem;
+}
+
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid var(--ff-border);
+}
+
+.site-header h1 {
+    margin-bottom: 0.5rem;
+}
+
+.site-nav {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.site-nav a {
+    color: var(--ff-accent);
     text-decoration: none;
     font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
 }
 
-.button:hover,
-.button:focus {
-    background-color: #0b5ed7;
+.site-nav a:hover,
+.site-nav a:focus {
+    color: var(--ff-accent-dark);
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .site-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.card-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid var(--ff-border);
+    border-radius: var(--ff-radius);
+    padding: 1.5rem;
+    box-shadow: var(--ff-shadow);
+}
+
+.cta {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.5rem;
+    background-color: var(--ff-accent);
+    color: #fff;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--ff-accent-dark);
+    transform: translateY(-1px);
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+label {
+    font-weight: 600;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid var(--ff-border);
+    border-radius: 0.375rem;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.site-footer {
+    background: #101827;
+    color: #e5ecf5;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.site-footer a {
+    color: #c3d9ff;
+    text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+    text-decoration: underline;
+}
+
+.site-footer .footer-links {
+    display: inline-flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-left: 0.75rem;
+}
+
+@media (max-width: 500px) {
+    header,
+    main,
+    footer {
+        padding: 1.25rem;
+    }
+
+    .site-footer p {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .site-footer .footer-links {
+        margin-left: 0;
+    }
 }

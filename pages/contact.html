@@ -7,30 +7,36 @@
     <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <h1>Contact</h1>
         <p>We welcome your questions, collaboration ideas, and feedback.</p>
+        <nav class="site-nav">
+            <a href="/foundation-freedom/index.html">Home</a>
+            <a href="/foundation-freedom/pages/mission.html">Mission</a>
+            <a href="/foundation-freedom/pages/join.html">Join</a>
+            <a href="/foundation-freedom/pages/contact.html">Contact</a>
+        </nav>
     </header>
     <main>
         <section>
             <p>For privacy/security, do not include sensitive info.</p>
             <form id="contact-form">
                 <div>
-                    <label for="contact-name">Name</label><br />
+                    <label for="contact-name">Name</label>
                     <input id="contact-name" name="name" type="text" required />
                 </div>
                 <div>
-                    <label for="contact-email">Email</label><br />
+                    <label for="contact-email">Email</label>
                     <input id="contact-email" name="email" type="email" required />
                 </div>
                 <div>
-                    <label for="contact-message">Message</label><br />
+                    <label for="contact-message">Message</label>
                     <textarea id="contact-message" name="message" rows="5" required></textarea>
                 </div>
                 <p id="contact-feedback" role="status" aria-live="polite" hidden></p>
                 <a
                     id="contact-send"
-                    class="button"
+                    class="btn"
                     href="mailto:foundationfreedom@proton.me?subject=Contact%20from%20Foundation%20Freedom%20site"
                 >
                     Send
@@ -38,12 +44,17 @@
             </form>
         </section>
     </main>
-    <footer>
-        <p>&copy; <span id="current-year"></span> Foundation Freedom. All rights reserved.</p>
+    <footer class="site-footer">
+        <p>
+            &copy; <span class="js-current-year"></span> Foundation Freedom
+            <span class="footer-links">
+                <a href="/foundation-freedom/index.html">Home</a>
+                <a href="/foundation-freedom/pages/mission.html">Mission</a>
+                <a href="/foundation-freedom/pages/join.html">Join</a>
+                <a href="/foundation-freedom/pages/contact.html">Contact</a>
+            </span>
+        </p>
     </footer>
     <script src="../assets/js/main.js"></script>
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
