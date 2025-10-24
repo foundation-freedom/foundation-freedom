@@ -1,1 +1,1 @@
-// Placeholder JavaScript file for project
+console.log('Foundation Freedom ready');
