@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Join | Foundation Freedom</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <style>
+        .join-section {
+            display: grid;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        @media (min-width: 768px) {
+            .join-section {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .join-card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .join-card h3 {
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+        }
+
+        .join-card p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .cta {
+            margin-top: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Join Foundation Freedom</h1>
+        <p>Anyone aligned with our mission of voluntary, decentralized cooperation is welcome to participate.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Ways to Join</h2>
+            <div class="join-section">
+                <article class="join-card">
+                    <h3>Contributor</h3>
+                    <p>Developers, writers, and educators collaborate to design, document, and build the systems that empower free communities.</p>
+                </article>
+                <article class="join-card">
+                    <h3>Supporter</h3>
+                    <p>Support the mission by donating, sharing resources, or amplifying the work so more people can build together.</p>
+                </article>
+                <article class="join-card">
+                    <h3>Community Member</h3>
+                    <p>Connect with local or online groups, participate in discussions, and bring decentralized practices into everyday life.</p>
+                </article>
+            </div>
+        </section>
+        <div class="cta">
+            <a class="button" href="contact.html">Get Involved</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> Foundation Freedom. All rights reserved.</p>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
