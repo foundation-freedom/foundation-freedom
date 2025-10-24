@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <h1>Foundation Freedom</h1>
         <p>Building decentralized governance through voluntary contract.</p>
-        <nav>
-            <a href="pages/mission.html">Our Mission</a>
+        <nav class="site-nav">
+            <a href="/foundation-freedom/index.html">Home</a>
+            <a href="/foundation-freedom/pages/mission.html">Mission</a>
+            <a href="/foundation-freedom/pages/join.html">Join</a>
             <a href="/foundation-freedom/pages/contact.html">Contact</a>
         </nav>
     </header>
@@ -34,12 +36,17 @@
             <p>Email: <a href="mailto:foundationfreedom360@gmail.com">foundationfreedom360@gmail.com</a></p>
         </section>
     </main>
-    <footer>
-        <p>&copy; <span id="current-year"></span> Foundation Freedom. All rights reserved.</p>
+    <footer class="site-footer">
+        <p>
+            &copy; <span class="js-current-year"></span> Foundation Freedom
+            <span class="footer-links">
+                <a href="/foundation-freedom/index.html">Home</a>
+                <a href="/foundation-freedom/pages/mission.html">Mission</a>
+                <a href="/foundation-freedom/pages/join.html">Join</a>
+                <a href="/foundation-freedom/pages/contact.html">Contact</a>
+            </span>
+        </p>
     </footer>
     <script src="assets/js/main.js"></script>
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>

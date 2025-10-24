@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     console.log('Foundation Freedom ready');
 
+    const year = new Date().getFullYear();
+    document.querySelectorAll('.js-current-year').forEach(function (node) {
+        node.textContent = year;
+    });
+
     const contactForm = document.getElementById('contact-form');
     const sendLink = document.getElementById('contact-send');
 
