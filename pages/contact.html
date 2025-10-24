@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Foundation Freedom</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Contact</h1>
+        <p>We welcome your questions, collaboration ideas, and feedback.</p>
+    </header>
+    <main>
+        <section>
+            <p>For privacy/security, do not include sensitive info.</p>
+            <form id="contact-form">
+                <div>
+                    <label for="contact-name">Name</label><br />
+                    <input id="contact-name" name="name" type="text" required />
+                </div>
+                <div>
+                    <label for="contact-email">Email</label><br />
+                    <input id="contact-email" name="email" type="email" required />
+                </div>
+                <div>
+                    <label for="contact-message">Message</label><br />
+                    <textarea id="contact-message" name="message" rows="5" required></textarea>
+                </div>
+                <p id="contact-feedback" role="status" aria-live="polite" hidden></p>
+                <a
+                    id="contact-send"
+                    class="button"
+                    href="mailto:foundationfreedom@proton.me?subject=Contact%20from%20Foundation%20Freedom%20site"
+                >
+                    Send
+                </a>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> Foundation Freedom. All rights reserved.</p>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
