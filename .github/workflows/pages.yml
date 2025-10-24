@@ -1,4 +1,5 @@
-name: Deploy static site to GitHub Pages
+# Foundation Freedom Pages Deployment
+name: Deploy Static Site
 
 on:
   push:
@@ -15,20 +16,17 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload static site artifact
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
-
       - name: Deploy to GitHub Pages
-        id: deploy
+        id: deployment
         uses: actions/deploy-pages@v4
