@@ -99,3 +99,6 @@ No contracts, claims, or services are available to the public or to any agent of
 
 🔮 Closing Thought
 “We are not here to reform the system. We are here to replace it — peacefully, lawfully, and voluntarily.”
+
+## Deployment
+This site is deployed automatically to GitHub Pages via GitHub Actions. The published site is available at https://foundation-freedom.github.io/foundation-freedom/.
