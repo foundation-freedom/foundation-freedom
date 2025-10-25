@@ -10,6 +10,56 @@ document.addEventListener('DOMContentLoaded', function () {
         node.textContent = year;
     });
 
+    const blogLinkHref = '/foundation-freedom/pages/blog.html';
+
+    const ensureBlogLink = function (container) {
+        if (!container) {
+            return null;
+        }
+
+        const links = Array.from(container.querySelectorAll('a'));
+        const existing = links.find(function (link) {
+            return link.getAttribute('href') === blogLinkHref;
+        });
+
+        if (existing) {
+            return existing;
+        }
+
+        const blogLink = document.createElement('a');
+        blogLink.href = blogLinkHref;
+        blogLink.textContent = 'Blog';
+
+        const contactLink = links.find(function (link) {
+            return link.getAttribute('href') === '/foundation-freedom/pages/contact.html';
+        });
+
+        if (contactLink && contactLink.parentNode === container) {
+            container.insertBefore(blogLink, contactLink);
+        } else {
+            container.appendChild(blogLink);
+        }
+
+        return blogLink;
+    };
+
+    const navBlogLinks = Array.from(document.querySelectorAll('.site-nav')).map(ensureBlogLink).filter(Boolean);
+    const footerBlogLinks = Array.from(document.querySelectorAll('.footer-links')).map(ensureBlogLink).filter(Boolean);
+
+    const isBlogContext = Boolean(document.querySelector('[data-page="blog"]'));
+    const isPostContext = Boolean(document.querySelector('[data-page="post"]'));
+
+    if (isBlogContext || isPostContext) {
+        const markCurrent = function (link) {
+            if (link && !link.hasAttribute('aria-current')) {
+                link.setAttribute('aria-current', 'page');
+            }
+        };
+
+        markCurrent(navBlogLinks[0]);
+        markCurrent(footerBlogLinks[0]);
+    }
+
     const contactForm = document.getElementById('contact-form');
     const sendLink = document.getElementById('contact-send');
 
