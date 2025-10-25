@@ -105,9 +105,14 @@ ol {
     }
 }
 
+.grid,
 .card-grid {
     display: grid;
     gap: 1.5rem;
+}
+
+.grid {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 }
 
 @media (min-width: 768px) {
@@ -122,6 +127,20 @@ ol {
     border-radius: var(--ff-radius);
     padding: 1.5rem;
     box-shadow: var(--ff-shadow);
+}
+
+.media-placeholder {
+    border: 1px solid var(--ff-border);
+    border-radius: var(--ff-radius);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    background-color: #fff;
+}
+
+.media-placeholder svg {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .cta {
