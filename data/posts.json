@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "2025-10-24-welcome",
+    "title": "Welcome to Foundation Freedom",
+    "date": "2025-10-24",
+    "tags": ["intro"],
+    "summary": "Short teaser sentence.",
+    "visibility": "public"
+  },
+  {
+    "slug": "2025-10-24-vision",
+    "title": "The Vision for Foundation Freedom",
+    "date": "2025-10-24",
+    "tags": ["vision", "roadmap"],
+    "summary": "A look at the voluntary governance roadmap.",
+    "visibility": "public"
+  }
+]
