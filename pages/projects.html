@@ -4,59 +4,72 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Projects | Foundation Freedom</title>
-    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <base href="/foundation-freedom/" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
     <header class="site-header">
-        <h1>Projects</h1>
-        <p>Explore initiatives that move Foundation Freedom from vision to action.</p>
-        <nav class="site-nav">
-            <a href="/foundation-freedom/index.html">Home</a>
-            <a href="/foundation-freedom/pages/mission.html">Mission</a>
-            <a href="/foundation-freedom/pages/join.html">Join</a>
-            <a href="/foundation-freedom/pages/projects.html" aria-current="page">Projects</a>
-            <a href="/foundation-freedom/pages/contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Active Experiments</h2>
-            <p>
-                Each project below advances decentralized, voluntary systems that empower communities to govern themselves.
-                Explore the goals, current status, and ways to get involved.
-            </p>
-        </section>
-        <section class="projects-grid">
-            <article class="card">
-                <figure class="card-thumb">
-                    <img src="../assets/images/projects/paramotor.svg" alt="Illustration of a paramotor soaring in a bright sky" />
-                </figure>
-                <h3>Paramotor Freedom Network</h3>
-                <p>Building a flying network that demonstrates voluntary coordination, mutual aid, and community funded infrastructure.</p>
-                <a class="btn" href="/foundation-freedom/pages/projects/paramotor.html">View</a>
-            </article>
-            <article class="card">
-                <figure class="card-thumb">
-                    <img src="../assets/images/projects/food-forest.svg" alt="Stylized canopy of trees representing a community food forest" />
-                </figure>
-                <h3>Neighborhood Food Forests</h3>
-                <p>Transforming vacant land into community food hubs that provide abundance, training, and decentralized stewardship models.</p>
-                <a class="btn" href="/foundation-freedom/pages/projects/food-forest.html">View</a>
-            </article>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <p>
-            &copy; <span class="js-current-year"></span> Foundation Freedom
-            <span class="footer-links">
+        <div class="container flex between center wrap gap-sm">
+            <div>
+                <h1>Projects</h1>
+                <p>Explore initiatives that move Foundation Freedom from vision to action.</p>
+            </div>
+            <nav class="nav">
                 <a href="/foundation-freedom/index.html">Home</a>
                 <a href="/foundation-freedom/pages/mission.html">Mission</a>
                 <a href="/foundation-freedom/pages/join.html">Join</a>
                 <a href="/foundation-freedom/pages/projects.html" aria-current="page">Projects</a>
                 <a href="/foundation-freedom/pages/contact.html">Contact</a>
-            </span>
-        </p>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container stack">
+            <section>
+                <h2>Active Experiments</h2>
+                <p>
+                    Each project below advances decentralized, voluntary systems that empower communities to govern themselves.
+                    Explore the goals, current status, and ways to get involved.
+                </p>
+            </section>
+            <section>
+                <div class="row">
+                    <article class="col card">
+                        <figure class="card-thumb">
+                            <img src="assets/images/projects/paramotor.svg" alt="Illustration of a paramotor soaring in a bright sky" />
+                        </figure>
+                        <h3>Paramotor Freedom Network</h3>
+                        <p>Building a flying network that demonstrates voluntary coordination, mutual aid, and community funded infrastructure.</p>
+                        <a class="btn" href="/foundation-freedom/pages/projects/paramotor.html">View</a>
+                    </article>
+                    <article class="col card">
+                        <figure class="card-thumb">
+                            <img src="assets/images/projects/food-forest.svg" alt="Stylized canopy of trees representing a community food forest" />
+                        </figure>
+                        <h3>Neighborhood Food Forests</h3>
+                        <p>Transforming vacant land into community food hubs that provide abundance, training, and decentralized stewardship models.</p>
+                        <a class="btn" href="/foundation-freedom/pages/projects/food-forest.html">View</a>
+                    </article>
+                    <article class="col card">
+                        <h3>In Discovery</h3>
+                        <p>Document research sprints, governance pilots, or partnerships you intend to announce next.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="container flex between wrap gap-sm">
+            <p>&copy; <span class="js-current-year"></span> Foundation Freedom</p>
+            <nav class="nav">
+                <a href="/foundation-freedom/index.html">Home</a>
+                <a href="/foundation-freedom/pages/mission.html">Mission</a>
+                <a href="/foundation-freedom/pages/join.html">Join</a>
+                <a href="/foundation-freedom/pages/projects.html" aria-current="page">Projects</a>
+                <a href="/foundation-freedom/pages/contact.html">Contact</a>
+            </nav>
+        </div>
     </footer>
-    <script src="../assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
