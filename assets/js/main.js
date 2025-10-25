@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     console.log('Foundation Freedom ready');
 
+    if (document.body.classList.contains('page-404')) {
+        console.log('404 page loaded');
+    }
+
     const year = new Date().getFullYear();
     document.querySelectorAll('.js-current-year').forEach(function (node) {
         node.textContent = year;
